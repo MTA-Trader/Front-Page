@@ -1,3 +1,7 @@
-html {
-  /* background-color: pink; */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+  background-color: #eff3f8;
+  font-size: medium;
+  font-family: 'Open Sans', sans-serif;
 }
