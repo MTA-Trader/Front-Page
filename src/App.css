@@ -2,6 +2,16 @@
 
 body {
   background-color: #eff3f8;
+  color: #212F3C;
   font-size: medium;
   font-family: 'Open Sans', sans-serif;
+}
+
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
