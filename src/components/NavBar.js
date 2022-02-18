@@ -1,14 +1,17 @@
-import { Navbar, NavbarBrand, Nav, Button } from 'reactstrap'
+import { Navbar, NavbarBrand, Nav, NavLink } from 'reactstrap'
 
 const NavBar = props => {
-    return <Navbar light expand="md" className="NavBar-nav" style={{ marginLeft: "1rem", marginRight: "1rem" }}>
+    return <Navbar expand="md" className="NavBar-nav" style={{ marginLeft: "1rem", marginRight: "1rem" }}>
         <NavbarBrand href="/">
             <img src='./../images/logo.png' style={{ maxHeight: "5rem" }} alt={"Mortgage Trading Analytics"} />
         </NavbarBrand>
-        <Nav navbar>
-            <Button style={{ fontWeight: 600, borderWidth: "medium" }} outline href="https://tools.mta-trader.com">
+        <Nav pills navbar style={{ fontWeight: 600 }}>
+            <NavLink active href="https://tools.mta-trader.com/">
                 Client Access
-            </Button>
+            </NavLink>
+            <NavLink href="https://tools.mta-trader.com/contact">
+                Contact Us
+            </NavLink>
         </Nav>
     </Navbar>
 }
