@@ -5,11 +5,11 @@ const NavBar = props => {
         <NavbarBrand href="/">
             <img src='./../images/logo.png' style={{ maxHeight: "5rem" }} alt={"Mortgage Trading Analytics"} />
         </NavbarBrand>
-        <Nav right navbar>
+        <Nav navbar>
             <Button style={{ fontWeight: 600, borderWidth: "medium" }} outline href="https://tools.mta-trader.com">
                 Client Access
             </Button>
-        </Nav >
+        </Nav>
     </Navbar>
 }
 
