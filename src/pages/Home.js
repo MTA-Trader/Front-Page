@@ -1,11 +1,12 @@
 import { Container } from "reactstrap"
 
+import Spacer from '../components/Spacer'
 import Footer from "../components/Footer"
 
 const HomePage = props => {
     return <Container style={{ maxWidth: "85rem" }}>
-        <img className="full-width" style={{ objectFit: "cover", height: "30rem" }} src="../../images/transamerica-pyramid.jpg" alt="Transamerica Pyramid" />
-        <div style={{ margin: "2rem 0 2rem 0" }}>
+        <img className="full-width" style={{ marginBottom: "2rem", objectFit: "cover", height: "30rem" }} src="../../images/transamerica-pyramid.jpg" alt="Transamerica Pyramid" />
+        <div>
             <h4 style={{ fontWeight: 600, textAlign: "center" }}>Who We Are</h4>
             Mortgage Trading Analytics, LLC (MTA) is a capital markets optimization shop, specializing in risk management and trading arbitrage with a focus on technology. Cultivating and creating various trading opportunities as well as analyzing multiple secondary marketing sales options allows MTA to bridge the gap between where you are and where you want to be.
             <br /><br />
@@ -13,6 +14,7 @@ const HomePage = props => {
             <br /><br />
             In addition to risk management and trading arbitrage, MTA is well-versed in strategic consulting services, specializing in problem detection and resolution. Previous assignments run the gamut: operational tuning, system build-outs, code reconciliation, financial modeling, forecasting, pipeline metrics, custom analytics, best-ex sales solutions, trade improvement, department creation.
         </div>
+        <Spacer />
         <div style={{ display: "flex", alignItems: "center", flexWrap: "wrap" }}>
             <img style={{ flexBasis: "auto", flexGrow: 1, minWidth: 0, maxWidth: "40rem" }} src="../../images/gains.png" alt="Gains" />
             <div style={{ flexBasis: "20rem", flexGrow: 2, padding: "1rem" }}>
@@ -24,7 +26,7 @@ const HomePage = props => {
                 A policy and procedure review is where MTA starts, simplifying how things work and filling-in existing gaps. Restructuring margins and targeted volume generation allow for revenue maximization. Auditing the received execution allows leakage discovery, which is then remedied through various means. Hedge set-up, hedge company communication, margin call exposure... the list goes on and on, and so does the revenue improvement.
                 <br /><br />
                 <h5>Secondary Marketing Tune-Up</h5>
-                Under the Capital Markets umbrella, Secondary Marketing is it's own unique entity with it's own set of requirements and complications. Setting pricing, pushing rate sheets, managing P&L, regulating pull-through, renegotiating lock pricing, the list goes on and on. MTA has countless years of experience handling these complexities as well as unique approaches to some traditional complications.
+                Under the Capital Markets umbrella, Secondary Marketing is it's own unique entity with it's own set of requirements and complications. Setting pricing, pushing rate sheets, managing P&#38;L, regulating pull-through, renegotiating lock pricing, the list goes on and on. MTA has countless years of experience handling these complexities as well as unique approaches to some traditional complications.
                 <br /><br />
                 <h5>Post-closing Prioritization &#38; Warehouse Best-EX</h5>
                 Delivering loans takes time, and that costs money. But how much money, and what's the best way to minimize the cost? Holding that file on your warehouse line costs money as well, and with multiple lines, each having different factors, knowing which one to use for which file can be a tedious and seemingly impossible task. MTA has proprietary modeling to let you see exactly what file will be the most costly and by how much, as well as where you should hold it and why, allowing you to prioritize your limited time and manpower, minimizing your additional costs.
@@ -36,7 +38,8 @@ const HomePage = props => {
                 Don't have a lock desk? Need your Secondary Marketing Department reorganized? Does Capital Markets need a tear-down and rebuild? MTA has done all of that. Or perhaps it's time to shrink them down and outsource a good bit of the process. MTA can do that too, helping you downsize or offload various capital markets processes... or just let us handle it for you.
             </div>
         </div>
-        <div style={{ margin: "2rem 0 2rem 0" }}>
+        <Spacer />
+        <div>
             <h4 style={{ fontWeight: 600, textAlign: "center" }}>Work With MTA</h4>
             <h5>Vendor Services</h5>
             Sign-up for a full-service vendor relationship with MTA and let us handle as much or as little as you need. Capital Markets tuning, bringing your trading in-house, managing your trading, margin controls, pricing restructure, arbitrage trades... we'll work with your current processes, vendors, and systems, improve upon them, and make your Secondary profitability our primary concern.
@@ -49,7 +52,7 @@ const HomePage = props => {
             No time wasted retrieving and uploading data. MTA pulls, uploads, and disseminates everything to you and for you.
             All results are easily extractable in a user-friendly CSV format.
         </div>
-        <img className="full-width" style={{ objectFit: "cover", height: "30rem" }} src="../../images/golden-gate-bridge.jpg" alt="SF Golden Gate Bridge" />
+        <img className="full-width" style={{ marginTop: "2rem", objectFit: "cover", height: "30rem" }} src="../../images/golden-gate-bridge.jpg" alt="SF Golden Gate Bridge" />
         <Footer />
     </Container>
 }

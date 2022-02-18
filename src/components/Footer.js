@@ -1,7 +1,7 @@
 import { Card } from 'reactstrap'
 
 const Footer = props => {
-    return <Card style={{ margin: "5rem 0 2rem 0", backgroundColor: "#F8F8FF" }} >
+    return <Card style={{ margin: "2rem 0 2rem 0", backgroundColor: "#F8F8FF" }} >
         <div style={{ display: "flex", justifyContent: "space-evenly", color: "#273746", padding: "0.5rem" }}>
             <div>
                 <div>Mortgage Trading Analytics, LLC</div>
