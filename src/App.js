@@ -3,12 +3,12 @@ import './App.css'
 import React from 'react'
 
 import NavBar from './components/NavBar'
-import Router from './Router'
+import Home from './Home'
 
 const App = props => {
   return <>
     <NavBar />
-    <Router />
+    <Home />
   </>
 }
 

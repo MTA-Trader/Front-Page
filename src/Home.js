@@ -1,8 +1,8 @@
 import { Container } from "reactstrap"
 
-import Header from '../components/Header'
-import Spacer from '../components/Spacer'
-import Footer from "../components/Footer"
+import Header from './components/Header'
+import Spacer from './components/Spacer'
+import Footer from "./components/Footer"
 
 const HomePage = props => {
     return <Container style={{ maxWidth: "85rem" }}>
