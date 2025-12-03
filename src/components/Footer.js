@@ -8,7 +8,7 @@ const Footer = props => {
                 <div>100 Elena Circle / San Rafael, CA 94903</div>
             </div>
             <div>
-                <div>(628) 237-6058</div>
+                <div>(404) 825-1560</div>
                 <div>jsheadel@mta-trader.com</div>
             </div>
         </div>
