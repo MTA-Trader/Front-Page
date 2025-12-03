@@ -9,7 +9,8 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-scripts": "5.0.1",
-    "reactstrap": "^9.1.1"
+    "reactstrap": "^9.1.1",
+    "sass": "^1.94.2"
   },
   "scripts": {
     "start": "react-scripts start",
