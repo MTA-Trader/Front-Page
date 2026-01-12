@@ -6,10 +6,10 @@ const NavBar = props => {
             <img src='./../images/logo.png' style={{ maxHeight: "5rem" }} alt={"Mortgage Trading Analytics"} />
         </NavbarBrand>
         <Nav pills navbar style={{ fontWeight: 600, flexFlow: "row" }}>
-            <NavLink style={{ paddingRight: "0.5rem", paddingLeft: "0.5rem" }} active href="https://tools.mta-trader.com/">
+            <NavLink style={{ color: "white", paddingRight: "0.5rem", paddingLeft: "0.5rem" }} active href="https://tools.mta-trader.com/">
                 Client Access
             </NavLink>
-            <NavLink style={{ paddingRight: "0.5rem", paddingLeft: "0.5rem" }} href="mailto:jsheadel@mta-trader.com">
+            <NavLink style={{ color: "rgb(13, 110, 253)",paddingRight: "0.5rem", paddingLeft: "0.5rem" }} href="mailto:jsheadel@mta-trader.com">
                 Contact Us
             </NavLink>
         </Nav>
