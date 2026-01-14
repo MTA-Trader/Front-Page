@@ -7,7 +7,6 @@ import Header from '../components/Header'
 const ContactPage = props => {
     const [nameInput, setNameInput] = useState("")
     const [emailInput, setEmailInput] = useState("")
-    const [subjectInput, setSubjectInput] = useState("")
     const [messageInput, setMessageInput] = useState("")
 
     const handleSend = e => {
@@ -15,12 +14,10 @@ const ContactPage = props => {
         axios.post("api/contact", {
             Name: nameInput,
             Email: emailInput,
-            Subject: subjectInput,
             Message: messageInput
         })
             .then(() => {
                 toast.info("Thank you. A message has been sent.")
-                setSubjectInput("")
                 setMessageInput("")
             })
             .catch(() => toast.error("Sorry, an error occurred. Please try emailing jsheadel@mta-trader.com"))
@@ -38,10 +35,6 @@ const ContactPage = props => {
                     <FormGroup>
                         <Label htmlFor="email">Email</Label>
                         <Input name="email" required type="email" value={emailInput} onChange={e => setEmailInput(e.target.value)} />
-                    </FormGroup>
-                    <FormGroup>
-                        <Label htmlFor="subject">Subject</Label>
-                        <Input name="subject" required value={subjectInput} onChange={e => setSubjectInput(e.target.value)} />
                     </FormGroup>
                     <FormGroup>
                         <Label htmlFor="message">Message</Label>
