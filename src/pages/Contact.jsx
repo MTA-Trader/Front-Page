@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Container, Row, Col, Form, FormGroup, Label, Input, Button } from 'reactstrap'
+import { Container, Row, Col, Form, FormGroup, Label, Input, Button, Spinner } from 'reactstrap'
 import axios from 'axios'
 import { toast } from 'react-toastify'
 import Header from '../components/Header'
@@ -9,8 +9,11 @@ const ContactPage = props => {
     const [emailInput, setEmailInput] = useState("")
     const [messageInput, setMessageInput] = useState("")
 
+    const [isSending, setIsSending] = useState(false)
+
     const handleSend = e => {
         e.preventDefault()
+        setIsSending(true)
         axios.post("api/contact", {
             Name: nameInput,
             Email: emailInput,
@@ -21,6 +24,7 @@ const ContactPage = props => {
                 setMessageInput("")
             })
             .catch(() => toast.error("Sorry, an error occurred. Please try emailing jsheadel@mta-trader.com"))
+            .finally(() => setIsSending(false))
     }
 
     return <Container>
@@ -30,18 +34,23 @@ const ContactPage = props => {
                 <Form onSubmit={handleSend}>
                     <FormGroup>
                         <Label htmlFor="name">Name</Label>
-                        <Input name="name" required value={nameInput} onChange={e => setNameInput(e.target.value)} />
+                        <Input name="name" required disabled={isSending} value={nameInput} onChange={e => setNameInput(e.target.value)} />
                     </FormGroup>
                     <FormGroup>
                         <Label htmlFor="email">Email</Label>
-                        <Input name="email" required type="email" value={emailInput} onChange={e => setEmailInput(e.target.value)} />
+                        <Input name="email" required disabled={isSending} type="email" value={emailInput} onChange={e => setEmailInput(e.target.value)} />
                     </FormGroup>
                     <FormGroup>
                         <Label htmlFor="message">Message</Label>
-                        <Input name="message" required type="textarea" style={{ height: "10rem" }} value={messageInput} onChange={e => setMessageInput(e.target.value)} />
+                        <Input name="message" required disabled={isSending} type="textarea" style={{ height: "10rem" }} value={messageInput} onChange={e => setMessageInput(e.target.value)} />
                     </FormGroup>
                     <FormGroup>
-                        <Button type="submit">Send</Button>
+                        {isSending ? <Button color='primary' disabled>
+                            <Spinner size="sm" />
+                            <span>
+                                {' '}Sending...
+                            </span>
+                        </Button> : <Button color='primary' type="submit">Send</Button>}
                     </FormGroup>
                 </Form>
             </Col>
